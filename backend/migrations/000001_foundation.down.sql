@@ -1,0 +1,27 @@
+DROP POLICY IF EXISTS tenant_messages ON messages;
+DROP POLICY IF EXISTS tenant_conversations ON conversations;
+DROP POLICY IF EXISTS tenant_ledger ON ledger_entries;
+DROP POLICY IF EXISTS tenant_shipping ON shipping_requests;
+DROP POLICY IF EXISTS tenant_manufacturing ON manufacturing_orders;
+DROP POLICY IF EXISTS tenant_quotations ON quotations;
+DROP POLICY IF EXISTS tenant_products ON products;
+DROP POLICY IF EXISTS tenant_customers ON customers;
+DROP POLICY IF EXISTS tenant_users ON users;
+
+DROP TABLE IF EXISTS call_queue_entries;
+DROP TABLE IF EXISTS messages;
+DROP TABLE IF EXISTS conversations;
+DROP TABLE IF EXISTS payment_confirmations;
+DROP TABLE IF EXISTS ledger_entries;
+DROP TABLE IF EXISTS shipping_requests;
+DROP TABLE IF EXISTS shipping_rate_sheets;
+DROP TABLE IF EXISTS manufacturing_timeline_events;
+DROP TABLE IF EXISTS manufacturing_orders;
+DROP TABLE IF EXISTS quotations;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS files;
+DROP TABLE IF EXISTS audit_events;
+DROP TABLE IF EXISTS customer_users;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS tenants;

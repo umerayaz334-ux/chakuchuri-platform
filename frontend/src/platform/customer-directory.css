@@ -1,0 +1,586 @@
+.cc-customer-directory {
+  background: #ffffff;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.cc-directory-heading {
+  align-items: flex-start;
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  padding: 22px 24px;
+}
+
+.cc-directory-heading > div:first-child > span,
+.cc-directory-result-line > span {
+  color: var(--cc-theme-primary);
+  display: block;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cc-directory-heading h2 {
+  color: #07111f;
+  font-size: 24px;
+  margin: 4px 0 5px;
+}
+
+.cc-directory-heading p {
+  color: #68766f;
+  font-size: 12px;
+  margin: 0;
+}
+
+.cc-directory-stats {
+  display: grid;
+  flex: 0 1 670px;
+  grid-template-columns: repeat(4, minmax(118px, 1fr));
+}
+
+.cc-directory-stats > div {
+  align-items: center;
+  border-left: 1px solid #e4eae7;
+  display: flex;
+  gap: 9px;
+  min-width: 0;
+  padding: 4px 16px;
+}
+
+.cc-directory-stats svg {
+  color: #718079;
+  flex: 0 0 auto;
+}
+
+.cc-directory-stats .live svg {
+  color: #16846f;
+}
+
+.cc-directory-stats span,
+.cc-directory-stats small,
+.cc-directory-stats strong {
+  display: block;
+  min-width: 0;
+}
+
+.cc-directory-stats small {
+  color: #79857f;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cc-directory-stats strong {
+  color: #132019;
+  font-size: 14px;
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+.cc-directory-toolbar {
+  align-items: end;
+  background: #f8faf9;
+  border-bottom: 1px solid #e2e9e5;
+  border-top: 1px solid #e2e9e5;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: minmax(220px, 1fr) auto 150px 160px;
+  padding: 12px 16px;
+}
+
+.cc-directory-search {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d5dfda;
+  border-radius: 7px;
+  display: flex;
+  gap: 8px;
+  min-height: 40px;
+  min-width: 0;
+  padding: 0 11px;
+}
+
+.cc-directory-search:focus-within,
+.cc-directory-select select:focus {
+  border-color: var(--cc-theme-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--cc-theme-primary) 12%, transparent);
+  outline: 0;
+}
+
+.cc-directory-search svg {
+  color: #7a8781;
+  flex: 0 0 auto;
+}
+
+.cc-directory-search input {
+  background: transparent;
+  border: 0;
+  color: #17231e;
+  font: inherit;
+  font-size: 12px;
+  min-width: 0;
+  outline: 0;
+  width: 100%;
+}
+
+.cc-directory-segments {
+  background: #e9eeeb;
+  border-radius: 7px;
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+}
+
+.cc-directory-segments button {
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  color: #5e6b65;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  min-height: 34px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.cc-directory-segments button:hover {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: none;
+  transform: none;
+}
+
+.cc-directory-segments button.active {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(19, 32, 25, 0.08);
+  color: #132019;
+}
+
+.cc-directory-select {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.cc-directory-select > span {
+  color: #748079;
+  font-size: 8px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cc-directory-select select {
+  background: #ffffff;
+  border: 1px solid #d5dfda;
+  border-radius: 7px;
+  color: #26352e;
+  font: inherit;
+  font-size: 10px;
+  min-height: 40px;
+  min-width: 0;
+  padding: 0 9px;
+  width: 100%;
+}
+
+.cc-directory-result-line {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 43px;
+  padding: 0 18px;
+}
+
+.cc-directory-result-line small {
+  color: #7a8781;
+  font-size: 10px;
+}
+
+.cc-directory-table {
+  border-top: 1px solid #e8edea;
+  min-width: 0;
+}
+
+.cc-directory-table-head,
+.cc-directory-row {
+  align-items: center;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(240px, 1.45fr) minmax(145px, 0.78fr) minmax(135px, 0.72fr) minmax(190px, 0.9fr) 24px;
+  min-width: 0;
+}
+
+.cc-directory-table-head {
+  background: #fbfcfb;
+  border-bottom: 1px solid #e7ece9;
+  color: #7b8781;
+  font-size: 8px;
+  font-weight: 900;
+  min-height: 34px;
+  padding: 0 18px;
+  text-transform: uppercase;
+}
+
+.cc-directory-row {
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #edf1ef;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  min-height: 82px;
+  padding: 12px 18px;
+  text-align: left;
+  width: 100%;
+}
+
+.cc-directory-row:last-child {
+  border-bottom: 0;
+}
+
+.cc-directory-row:hover,
+.cc-directory-row:focus-visible {
+  background: #f8fbfa;
+  box-shadow: inset 3px 0 0 var(--cc-theme-primary);
+  outline: 0;
+  transform: none;
+}
+
+.cc-directory-customer {
+  align-items: center;
+  display: flex;
+  gap: 11px;
+  min-width: 0;
+}
+
+.cc-directory-avatar {
+  display: inline-flex;
+  flex: 0 0 42px;
+  height: 42px;
+  position: relative;
+  width: 42px;
+}
+
+.cc-directory-avatar .cc-profile-avatar {
+  font-size: 11px;
+  height: 42px;
+  width: 42px;
+}
+
+.cc-directory-avatar > b {
+  background: #98a7a0;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  bottom: 0;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  width: 10px;
+}
+
+.cc-directory-avatar > b.online {
+  background: #18a47f;
+}
+
+.cc-directory-customer > span,
+.cc-directory-customer strong,
+.cc-directory-customer small,
+.cc-directory-customer em,
+.cc-directory-activity strong,
+.cc-directory-activity small,
+.cc-directory-account strong,
+.cc-directory-account small {
+  display: block;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.cc-directory-customer strong,
+.cc-directory-activity strong,
+.cc-directory-account strong {
+  color: #132019;
+  font-size: 12px;
+}
+
+.cc-directory-customer small,
+.cc-directory-activity small,
+.cc-directory-account small {
+  color: #738079;
+  font-size: 9px;
+  line-height: 1.45;
+  margin-top: 3px;
+}
+
+.cc-directory-customer em {
+  color: #56645d;
+  font-size: 9px;
+  font-style: normal;
+  margin-top: 3px;
+}
+
+.cc-directory-services {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+}
+
+.cc-directory-services b,
+.cc-directory-services em {
+  background: #edf4f1;
+  border: 1px solid #dce8e3;
+  border-radius: 999px;
+  color: #35584d;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+  padding: 4px 7px;
+}
+
+.cc-directory-services small {
+  color: #89948f;
+  font-size: 9px;
+}
+
+.cc-directory-row-action {
+  color: #87938d;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.cc-directory-row:hover .cc-directory-row-action {
+  color: var(--cc-theme-primary);
+}
+
+.cc-directory-empty {
+  border-top: 1px solid #edf1ef;
+  min-height: 210px;
+  padding: 36px;
+}
+
+.cc-nav-group {
+  display: grid;
+  gap: 2px;
+}
+
+.cc-nav-group + .cc-nav-group {
+  margin-top: 6px;
+}
+
+.cc-access-suspension-card {
+  background: #fff8ed;
+  border: 1px solid #f3d6aa;
+  border-radius: 7px;
+  margin-top: 12px;
+  padding: 12px;
+}
+
+.cc-access-suspension-card > header {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.cc-access-suspension-card > header svg {
+  color: #b56818;
+  flex: 0 0 auto;
+}
+
+.cc-access-suspension-card strong,
+.cc-access-suspension-card small {
+  display: block;
+}
+
+.cc-access-suspension-card strong {
+  color: #713f12;
+  font-size: 11px;
+}
+
+.cc-access-suspension-card small {
+  color: #94612d;
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+.cc-access-suspension-card > p {
+  color: #7a4a18;
+  font-size: 10px;
+  line-height: 1.55;
+  margin: 10px 0 0;
+}
+
+.cc-access-review-request {
+  background: #ffffff;
+  border-top: 1px solid #f0d8b7;
+  display: grid;
+  gap: 3px;
+  margin: 11px -12px -12px;
+  padding: 10px 12px;
+}
+
+.cc-access-review-request > span {
+  color: #a15c18;
+  font-size: 8px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cc-access-suspension-field {
+  display: grid;
+  gap: 6px;
+  grid-column: 1 / -1;
+  margin-top: 12px;
+}
+
+.cc-access-suspension-field > span {
+  align-items: center;
+  color: #8b4f16;
+  display: flex;
+  font-size: 10px;
+  font-weight: 850;
+  gap: 6px;
+}
+
+.cc-access-suspension-field textarea {
+  border: 1px solid #e1c49a;
+  border-radius: 7px;
+  color: #3c2b1b;
+  font: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+  min-height: 82px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.cc-access-suspension-field textarea:focus {
+  border-color: #b56818;
+  box-shadow: 0 0 0 3px rgba(181, 104, 24, 0.12);
+  outline: 0;
+}
+
+.cc-access-suspension-field > small {
+  color: #8b6b48;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.cc-user-status.temporarily-suspended {
+  border-color: #f1c98f;
+  color: #a45112;
+}
+
+.cc-access-large-avatar.cc-profile-avatar {
+  flex-basis: 48px;
+  height: 48px;
+  width: 48px;
+}
+
+@media (max-width: 1180px) {
+  .cc-directory-heading {
+    display: grid;
+  }
+
+  .cc-directory-stats {
+    width: 100%;
+  }
+
+  .cc-directory-stats > div:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .cc-directory-toolbar {
+    grid-template-columns: minmax(220px, 1fr) 150px 160px;
+  }
+
+  .cc-directory-segments {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .cc-directory-table-head {
+    display: none;
+  }
+
+  .cc-directory-row {
+    gap: 8px 14px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 14px;
+  }
+
+  .cc-directory-customer {
+    grid-column: 1;
+  }
+
+  .cc-directory-services,
+  .cc-directory-activity,
+  .cc-directory-account {
+    grid-column: 1;
+    padding-left: 53px;
+  }
+
+  .cc-directory-row-action {
+    grid-column: 2;
+    grid-row: 1 / 5;
+  }
+}
+
+@media (max-width: 640px) {
+  .cc-directory-heading {
+    gap: 18px;
+    padding: 16px;
+  }
+
+  .cc-directory-heading h2 {
+    font-size: 21px;
+  }
+
+  .cc-directory-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cc-directory-stats > div {
+    border-bottom: 1px solid #e4eae7;
+    border-left: 0;
+    padding: 10px 6px;
+  }
+
+  .cc-directory-stats > div:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .cc-directory-toolbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 10px;
+  }
+
+  .cc-directory-search,
+  .cc-directory-segments {
+    grid-column: 1 / -1;
+  }
+
+  .cc-directory-segments button {
+    flex: 1 0 auto;
+  }
+
+  .cc-directory-result-line {
+    padding-inline: 14px;
+  }
+
+  .cc-directory-result-line small {
+    display: none;
+  }
+
+  .cc-directory-services,
+  .cc-directory-activity,
+  .cc-directory-account {
+    padding-left: 0;
+  }
+}

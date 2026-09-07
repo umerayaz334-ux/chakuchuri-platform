@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Debug/profile LAN demos may talk to local HTTP backends. -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

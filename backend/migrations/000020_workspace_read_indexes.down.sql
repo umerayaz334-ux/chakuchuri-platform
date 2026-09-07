@@ -1,0 +1,10 @@
+DROP INDEX IF EXISTS idx_call_signals_tenant_sequence;
+DROP INDEX IF EXISTS idx_calls_tenant_initiated;
+DROP INDEX IF EXISTS idx_conversations_tenant_created;
+DROP INDEX IF EXISTS idx_ledger_tenant_posted;
+DROP INDEX IF EXISTS idx_payments_tenant_created;
+DROP INDEX IF EXISTS idx_shipping_tenant_created;
+DROP INDEX IF EXISTS idx_rate_sheets_tenant_created;
+DROP INDEX IF EXISTS idx_manufacturing_tenant_created;
+DROP INDEX IF EXISTS idx_quotations_tenant_created;
+DROP INDEX IF EXISTS idx_products_tenant_updated_active;

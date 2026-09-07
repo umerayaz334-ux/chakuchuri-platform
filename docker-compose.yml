@@ -1,0 +1,45 @@
+# PostgreSQL for ChakuChuri. Data lives outside the app folder by default.
+#
+# Start:
+#   docker compose up -d
+#
+# Point the API at it:
+#   DATABASE_URL=postgres://chakuchuri:CHANGE_ME@127.0.0.1:5432/chakuchuri?sslmode=disable
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-chakuchuri}
+      POSTGRES_USER: ${POSTGRES_USER:-chakuchuri}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      # Prefer another disk / host path so a new app build never replaces the database.
+      - ${POSTGRES_DATA_DIR:-./.runtime/postgres}:/var/lib/postgresql/data
+  turn:
+    profiles: ["turn"]
+    image: coturn/coturn:4.6.2
+    restart: unless-stopped
+    network_mode: host
+    command:
+      - -n
+      - --log-file=stdout
+      - --fingerprint
+      - --lt-cred-mech
+      - --use-auth-secret
+      - --static-auth-secret=${CC_TURN_SHARED_SECRET:?Set CC_TURN_SHARED_SECRET in .env}
+      - --realm=${CC_TURN_REALM:-chakuchuri.local}
+      - --listening-port=3478
+      - --min-port=49152
+      - --max-port=49200
+      - --no-cli
+      - --no-tls
+      - --no-dtls
+      # On Linux hosts, set your public IP so candidates are reachable:
+      # --external-ip=${CC_TURN_EXTERNAL_IP}
+    # Pair with API env:
+    #   CC_TURN_URLS=turn:YOUR_PUBLIC_IP:3478?transport=udp
+    #   CC_TURN_SHARED_SECRET=same-as-above

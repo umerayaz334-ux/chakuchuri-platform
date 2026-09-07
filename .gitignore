@@ -1,0 +1,60 @@
+# Dependencies & builds
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+frontend/tmp/
+backend/bin/
+backend/*.log
+.logs/
+tmp/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local JSON snapshots (prefer PostgreSQL)
+backend/data/*.dev.json
+backend/data/*.dev.json.bak
+backend/data/*.tmp
+
+# Runtime data (keep folders via README.md; ignore contents)
+backend/backups/*.zip
+backend/backups/*.tmp
+backend/storage/uploads/**
+!.gitkeep
+
+# Relocated durable runtime (preferred outside repo)
+.runtime/
+backups/
+storage/
+*.dump
+chakuchuri-*.zip
+
+# Flutter / Android generated
+mobile/build/
+mobile/.dart_tool/
+mobile/.idea/
+mobile/*.iml
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/app/build/
+mobile/android/.kotlin/
+mobile/android/local.properties
+mobile/android/*.iml
+mobile/ios/Flutter/Flutter.podspec
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/ephemeral/
+mobile/windows/flutter/ephemeral/
+
+# Binary artifacts (GitHub 100MB limit)
+*.apk
+mobile/builds/
+mobile/dist/
+mobile/chakuchuri-*.apk
+scripts/.bin/
+frontend/public/downloads/*.apk
+
+**/*.apk

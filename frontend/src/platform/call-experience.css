@@ -1,0 +1,202 @@
+/* Polished direct-call and messenger experience */
+.cc-direct-call-backdrop {
+  backdrop-filter: blur(10px);
+  background: rgba(8, 15, 13, 0.72);
+}
+
+.cc-direct-call-panel.active {
+  background: #f8fbfa;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 0;
+  width: min(410px, 100%);
+}
+
+.cc-active-call-identity {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e9e6;
+  padding: 34px 28px 23px;
+  text-align: center;
+}
+
+.cc-profile-avatar.cc-call-avatar.active {
+  display: flex;
+  font-size: 28px;
+  height: 92px;
+  margin: 0 auto 15px;
+  width: 92px;
+}
+
+.cc-active-call-identity small {
+  color: #718079;
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cc-active-call-identity h2 {
+  color: #101d18;
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.cc-direct-call-panel.active .cc-in-app-call-room {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  gap: 14px;
+  padding: 20px 28px 28px;
+  text-align: center;
+}
+
+.cc-ringing-copy p {
+  color: #d7e4de;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+.cc-thread-icon-button:disabled,
+.cc-quote-call-button:disabled,
+.cc-call-back-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.cc-thread-icon-button.is-offline:disabled {
+  opacity: 0.38;
+}
+
+.cc-call-security svg { color: #138271; }
+
+.cc-call-live-status {
+  align-items: center;
+  display: grid;
+  gap: 7px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  margin: 1px auto 0;
+  max-width: 240px;
+  width: 100%;
+}
+
+.cc-call-live-status > i {
+  background: #a5b2ac;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+}
+
+.cc-call-live-status > i.is-live {
+  background: #16a36f;
+  box-shadow: 0 0 0 5px rgba(22, 163, 111, 0.12);
+}
+
+.cc-call-live-status strong { color: #182720; font-size: 14px; text-align: left; }
+.cc-call-live-status time { color: #50625a; font-size: 13px; font-variant-numeric: tabular-nums; font-weight: 800; }
+
+.cc-call-notice {
+  align-items: flex-start;
+  background: #fff8e8;
+  border: 1px solid #f2d79b;
+  border-radius: 7px;
+  color: #7a5310;
+  display: flex;
+  font-size: 12px;
+  gap: 8px;
+  line-height: 1.45;
+  padding: 10px 11px;
+  text-align: left;
+}
+
+.cc-call-notice svg { flex: 0 0 auto; margin-top: 1px; }
+
+.cc-call-audio-recovery,
+.cc-call-join-button {
+  align-items: center;
+  background: #0f7f70;
+  border: 1px solid #0f7f70;
+  border-radius: 7px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  gap: 7px;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 13px;
+}
+
+.cc-call-health {
+  align-items: center;
+  border-bottom: 1px solid #e0e8e4;
+  border-top: 1px solid #e0e8e4;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+}
+
+.cc-call-health span { align-items: center; color: #40544b; display: inline-flex; font-size: 11px; font-weight: 800; gap: 6px; }
+.cc-call-health span > i { background: #9aa9a2; border-radius: 50%; height: 7px; width: 7px; }
+.cc-call-health .quality-good > i { background: #16a36f; }
+.cc-call-health .quality-fair > i,
+.cc-call-health .quality-unstable > i,
+.cc-call-health .quality-audio-interrupted > i { background: #d98b14; }
+.cc-call-health small { color: #718079; font-size: 10px; }
+
+.cc-direct-call-panel.active .cc-call-room-controls { align-items: flex-start; display: flex; gap: 20px; justify-content: center; margin-top: 4px; }
+
+.cc-direct-call-panel.active .cc-call-control-button {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d1dcd7;
+  border-radius: 50%;
+  box-shadow: 0 7px 18px rgba(18, 38, 30, 0.08);
+  color: #183029;
+  display: grid;
+  height: 66px;
+  justify-items: center;
+  padding: 9px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  width: 66px;
+}
+
+.cc-direct-call-panel.active .cc-call-control-button:hover { box-shadow: 0 10px 24px rgba(18, 38, 30, 0.13); transform: translateY(-2px); }
+.cc-direct-call-panel.active .cc-call-control-button.is-muted { background: #e9efec; }
+.cc-direct-call-panel.active .cc-call-control-button.end { background: #e51d4c; border-color: #e51d4c; color: #ffffff; }
+.cc-direct-call-panel.active .cc-call-control-button span { font-size: 9px; font-weight: 800; }
+.cc-direct-call-panel.active .cc-in-app-call-room > footer { color: #88968f; font-size: 9px; margin-top: -2px; }
+
+/* Keep shared profile sizing from expanding messenger header avatars. */
+.cc-profile-avatar.cc-chat-avatar { height: 38px; width: 38px; }
+.cc-profile-avatar.cc-chat-avatar.large { font-size: 12px; height: 44px; width: 44px; }
+.cc-modern-thread-header { grid-template-columns: 44px minmax(0, 1fr) auto; }
+.cc-modern-thread-header > div:not(.cc-thread-actions) { min-width: 0; }
+.cc-modern-thread-header strong,
+.cc-modern-thread-header small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.cc-modern-thread .cc-message-bubble { max-width: min(64%, 520px); }
+.cc-message-image { max-width: min(240px, 100%); }
+.cc-message-image img { aspect-ratio: auto; max-height: 220px; object-fit: contain; }
+.cc-message-attachments:has(.cc-message-image) { max-width: 240px; }
+
+@media (max-width: 760px) {
+  .cc-communication-workspace { height: min(720px, calc(100dvh - 126px)); min-height: 540px; }
+  .cc-modern-thread { min-height: 0; }
+  .cc-modern-thread .cc-message-bubbles { min-height: 0; }
+}
+
+@media (max-width: 560px) {
+  .cc-direct-call-backdrop { align-items: stretch; }
+  .cc-direct-call-panel.active { border: 0; border-radius: 0; display: flex; flex-direction: column; justify-content: center; max-height: none; min-height: 100dvh; width: 100%; }
+  .cc-active-call-identity { border-bottom: 0; padding: 30px 22px 15px; }
+  .cc-profile-avatar.cc-call-avatar.active { height: 104px; width: 104px; }
+  .cc-direct-call-panel.active .cc-in-app-call-room { padding: 14px 22px calc(28px + env(safe-area-inset-bottom)); }
+  .cc-modern-thread .cc-message-bubble { max-width: 84%; }
+  .cc-message-image { max-width: min(210px, 100%); }
+  .cc-message-image img { max-height: 190px; }
+}

@@ -1,0 +1,136 @@
+.cc-communication-workspace .cc-chat-list-item.unread:not(.selected) {
+  background: color-mix(in srgb, var(--cc-theme-primary) 5%, #fff);
+  border-color: color-mix(in srgb, var(--cc-theme-primary) 18%, #dfe6e3);
+}
+
+.cc-chat-list-item.unread strong {
+  font-weight: 900;
+}
+
+.cc-chat-list-item.unread small {
+  color: #344c43;
+  font-weight: 750;
+}
+
+.cc-chat-list-item.unread em {
+  background: var(--cc-theme-primary);
+  color: var(--cc-theme-on-primary);
+  min-width: 20px;
+  text-align: center;
+}
+
+.cc-unread-divider {
+  align-items: center;
+  align-self: stretch;
+  color: var(--cc-theme-primary);
+  display: grid;
+  gap: 9px;
+  grid-template-columns: minmax(18px, 1fr) auto minmax(18px, 1fr);
+  margin: 5px 0 3px;
+  width: 100%;
+}
+
+.cc-unread-divider::before,
+.cc-unread-divider::after {
+  background: color-mix(in srgb, var(--cc-theme-primary) 22%, #d9e2de);
+  content: "";
+  height: 1px;
+}
+
+.cc-unread-divider span {
+  background: color-mix(in srgb, var(--cc-theme-primary) 9%, #fff);
+  border: 1px solid color-mix(in srgb, var(--cc-theme-primary) 20%, #d9e2de);
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 900;
+  padding: 5px 8px;
+  text-transform: uppercase;
+}
+
+.cc-msg-meta {
+  align-items: center;
+  display: inline-flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.cc-msg-ticks {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-bottom: 1px;
+}
+
+.cc-msg-ticks.delivered {
+  color: #7d9189;
+}
+
+.cc-msg-ticks.read {
+  color: #34b7f1;
+}
+
+.cc-message-bubbles-shell {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  position: relative;
+}
+
+.cc-sticky-date {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  transform: translateY(-8px);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+  z-index: 8;
+}
+
+.cc-sticky-date.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cc-sticky-date span {
+  backdrop-filter: blur(10px);
+  background: rgba(232, 238, 235, 0.97);
+  border: 1px solid #d5dfda;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  color: #4f635a;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px;
+}
+
+.cc-date-divider {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  margin: 10px 0 6px;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+}
+
+.cc-date-divider.is-covered span {
+  opacity: 0;
+}
+
+.cc-date-divider span {
+  background: #e8eeeb;
+  border: 1px solid #d5dfda;
+  border-radius: 999px;
+  color: #4f635a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 6px 12px;
+  transition: opacity 0.12s ease;
+}
